@@ -1,0 +1,221 @@
+    /*Reset*/
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  :root {
+    --primary: #2A7AE4;
+    --black: #000000;
+    --blackLighter: #9E9E9E;
+    --grayLight: #F5F5F5;
+    --grayMedium: #e5e5e5; 
+    --white: #FFFFFF;
+    --frontEnd: #6BD1FF;
+    --backEnd: #00C86F;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Color page */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, red, yellow);
+    }
+
+#calculator {
+    display: grid;
+    grid-template-areas: 'result' 'buttons';
+    justify-content: center;
+    align-items: center;
+    width:300px;
+    height:450px;
+    background: rgb(212, 194, 194);
+    margin:5% auto;
+    -webkit-animation:bgChange 2s 2s alternate infinite;
+    transition: all 2s ease;
+    padding-bottom: 20px;
+}
+
+button {
+    border:0;
+    color:#fff;
+}
+
+/* Display */
+
+#result {
+    display:block;
+    font-family: sans-serif;
+    width:217px;
+    height:80px;
+    margin:10px auto;
+    text-align: right;
+    border:0;
+    background:#3b3535;
+    color:#fff;
+    padding-top:20px;
+    font-size:20px;
+    outline: none;
+    overflow: hidden;
+    letter-spacing: 4px;
+    position: relative;
+    top:10px;
+    grid-area: 'result';
+}
+
+
+
+/* button */
+
+#main {
+    grid-area: 'buttons';
+}
+
+#result:hover {
+    
+    cursor: text;
+    
+}
+
+
+
+#first-rows {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    top:10px;
+}
+
+.rows {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:300px;
+    margin-top:10px;
+}
+
+#delete {
+    width:105px;
+    height:50px;
+    border-radius:4px;
+    margin-left: 0px;
+}
+
+/*Remover margin first buttons */
+.first-child {
+    margin-left: 0px !important;
+}
+
+/* Aligning the division and dot button properly */
+.fall-back {
+    margin-left:5px !important;
+}
+
+/* Aligning the addition and equals to button properly */
+.align {
+    margin-left: 6px !important;
+}
+
+/* Button styling */
+.btn-style {
+    width:50px;
+    height:50px;
+    margin-left:5px;
+    border-radius:4px;
+}
+
+.eqn {
+    width:50px;
+    height:50px;
+    margin-left:5px;
+    border-radius:4px;
+}
+
+
+
+
+/* Adding background color to the number values */
+ .num-bg {
+    background:#000;
+    color:#fff;
+    font-size:26px;
+    cursor:pointer;
+    outline:none;
+    border-bottom:3px solid #333;
+}
+
+ .num-bg:active {
+    background:#000;
+    color:#fff;
+    font-size:26px;
+    cursor:pointer;
+    outline:none;
+    box-shadow: inset 5px 5px 5px #555;
+}
+
+/*Adding background color to the operator values */ 
+.opera-bg {
+    background:#333;
+    color:#fff;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+    border-bottom:3px solid #555;
+}
+
+.opera-bg:active {
+    background:#333;
+    color:#fff;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+    box-shadow: inset 4px 4px 4px #555;
+}
+
+/*Adding a background color to the delete button */
+.del-bg {
+    background:#24b4de;
+    color:#fff;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+    border-bottom:3px solid #399cb9;
+}
+
+.del-bg:active {
+    background:#24b4de;
+    color:#fff;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+    box-shadow: inset 4px 4px 4px #399cb9;
+}
+
+/*Adding a background color to the equals to button */
+#eqn-bg {
+    background:#17a928;
+    color:#fff;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+    border-bottom:3px solid #1f7a29;
+}
+
+#eqn-bg:active {
+    background:#17a928;
+    color:#fff;
+    font-size:26px;
+    cursor: pointer;
+    outline:none;
+    box-shadow: inset 4px 4px 4px #1f7a29;
+}
