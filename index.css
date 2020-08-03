@@ -4,7 +4,7 @@
     font-family: 'Roboto', sans-serif;
   }
   
-  :root {
+:root {
     --primary: #2A7AE4;
     --black: #000000;
     --blackLighter: #9E9E9E;
@@ -15,21 +15,23 @@
     --backEnd: #00C86F;
   }
   
-  html,
-  body {
+html,
+body {
     margin: 0;
     padding: 0;
   }
 
-  /* Color page */
-  body {
-    display: flex;
+  /* Config page*/
+body {
+    display: grid;
+    grid-template-rows: 100px 450px;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background: linear-gradient(to bottom right, red, yellow);
     }
 
+    /* Config calculator */
 #calculator {
     display: grid;
     grid-template-areas: 'result' 'buttons';
@@ -71,21 +73,14 @@ button {
     grid-area: 'result';
 }
 
-
-
 /* button */
-
 #main {
     grid-area: 'buttons';
 }
 
-#result:hover {
-    
+#result:hover {  
     cursor: text;
-    
 }
-
-
 
 #first-rows {
     display:flex;
@@ -140,9 +135,6 @@ button {
     margin-left:5px;
     border-radius:4px;
 }
-
-
-
 
 /* Adding background color to the number values */
  .num-bg {
