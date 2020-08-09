@@ -1,2 +1,5 @@
-let buttons = new Buttons('calculator');
-buttons;
+const display = new calculatorController('main', 'date', 'time', 'value-current');
+
+display;
+
+

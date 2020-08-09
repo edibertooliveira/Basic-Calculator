@@ -1,0 +1,19 @@
+{
+  "name": "basic-calculator",
+  "version": "1.0.0",
+  "description": "Calculator Developed With Html5,CSS3 &amp; JavaScript:  The goal will be to program it only with pure javascript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edibertooliveira/Basic-Calculator.git"
+  },
+  "author": "Ediberto B. Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edibertooliveira/Basic-Calculator/issues"
+  },
+  "homepage": "https://github.com/edibertooliveira/Basic-Calculator#readme"
+}
