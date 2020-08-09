@@ -8,15 +8,34 @@
     Basic Calculator Developed With Html5,CSS3 & JavaScript</title>
 </head>
 <body>
+  <div 
+  class="theme-confirm">
+    <dic 
+    class="theme-item">
+      <span>Choose your theme:</span>
+      <ul>
+        <li><button type="button" onClick=(ThemeLunar()) id="theme-effect-lunar">Lunar theme</button> </li>
+
+        <li><button type="button" onClick=(ThemeSolar()) id="theme-effect-solar">Solar theme</button></li>
+      </ul>
+    </dic>
+  </div>
   <h1 id="title" style="
     text-align: center; 
     color: #ffffff;
     margin: 0px;">Basic Calculator
   </h1>
 
-  <div id="calculator"><!-- Main background -->
-             
+  <div id="calculator"><!-- Main background -->         
     <div id="result">
+      <div class="current-date">
+        <span id="date">12:00:00</span>
+        <span id="time">01/01/1990</span>
+      </div>
+      <div class="result">
+        <span id="database"></span>
+        <span id="value-current">0</span>
+      </div>
 
     </div>
     
@@ -26,14 +45,14 @@
         <button name="%" class="btn-style operator opera-bg fall-back">%</button>
         <button name="+" class="btn-style opera-bg value align operator">+</button>
       </div>
-           
+
       <div class="rows">
         <button name="7" class="btn-style num-bg num first-child">7</button>
         <button name="8" class="btn-style num-bg num">8</button>
         <button name="9" class="btn-style num-bg num">9</button>
         <button name="-" class="btn-style opera-bg operator">-</button>
       </div>
-           
+
       <div class="rows">
         <button name="4" class="btn-style num-bg num first-child">4</button>
         <button name="5" class="btn-style num-bg num">5</button>
@@ -56,11 +75,17 @@
     </div>     
       
   </div>
-    
 
+  <script src="./src/controller/calculator/calculatorController.js"></script>
   
-  <script src="./calculator/returnsTheButton.js"></script>
+  <script src="./src/controller/theme/theme.js"></script>
   <script src="./index.js"></script>
+  <script>
+
+    
+    
+    
+  </script>
     
 
 </body>

@@ -1,4 +1,8 @@
-    /*Reset*/
+@font-face{
+    font-family: 'digital';
+    src: url('./src/assets/font/digital-7.ttf')
+}
+/*Reset*/
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
@@ -20,7 +24,6 @@ body {
     margin: 0;
     padding: 0;
   }
-
   /* Config page*/
 body {
     display: grid;
@@ -28,7 +31,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to bottom right, red, yellow);
     }
 
     /* Config calculator */
@@ -39,11 +41,100 @@ body {
     align-items: center;
     width:300px;
     height:450px;
-    background: rgb(212, 194, 194);
+    background: rgb(189, 147, 249);
     margin:5% auto;
     -webkit-animation:bgChange 2s 2s alternate infinite;
     transition: all 2s ease;
     padding-bottom: 20px;
+}
+
+body .theme-ok {
+    display: none;
+}
+
+body .theme-confirm {
+    display: flex;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    justify-content: start;
+    align-items: center;
+    transition: all 2s ease;
+    z-index: 9;
+    
+}
+
+body .theme-confirm >.theme-item{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    background: rgb(212, 194, 194);
+    margin: 5% auto;
+    -webkit-animation: bgChange 2s 2s alternate infinite;
+    transition: all 2s ease;
+    padding: 0.8rem;
+}
+
+body .theme-confirm >.theme-item span {
+    padding-top: 0.8rem;
+}
+
+body .theme-confirm .theme-item ul{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+}
+
+body .theme-confirm .theme-item ul li {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    
+ 
+}
+
+body .theme-confirm .theme-item ul li + li {
+    margin-left: 0.6rem;
+    
+}
+
+body .theme-confirm .theme-item ul li button{
+    text-decoration: none;
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+    line-height: 2.5rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+    color: var(--black);
+}
+
+body .theme-confirm #theme-effect-lunar:hover{
+    background: linear-gradient(to bottom right, #010254, #a000dd);
+    color: #fff;
+}
+
+body .theme-confirm #theme-effect-solar:hover{
+    background: linear-gradient(to bottom right, #ff0000 , #fdbb2d);
+    color: #fff;
+}
+
+.solar-theme{
+    background: linear-gradient(to bottom right, #ff0000 , #fdbb2d);
+}
+
+.lunar-theme{
+    background: linear-gradient(to bottom right, #010254, #a000dd);
 }
 
 button {
@@ -63,7 +154,6 @@ button {
     border:0;
     background:#3b3535;
     color:#fff;
-    padding-top:20px;
     font-size:20px;
     outline: none;
     overflow: hidden;
@@ -73,6 +163,24 @@ button {
     grid-area: 'result';
 }
 
+#result .current-date,
+#result .result {
+    display: flex;
+    width: 200px;
+    font: 400 0.6rem digital;
+    justify-content: space-between;
+    margin: 0.7rem;
+}
+
+#result .result {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+}
+#result .result span:first-child{
+    font-size: 0.6rem;
+    text-align: start;
+}
 /* button */
 #main {
     grid-area: 'buttons';
