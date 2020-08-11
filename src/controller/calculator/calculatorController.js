@@ -20,7 +20,7 @@ class calculatorController {
       // this.DataDisplay = this.CurrentDate.toLocaleDateString();
       // this.TimeDisplay = this.CurrentDate.toLocaleTimeString();
       this.InputCurrent = this._valueCurrent;
-    }, 500);
+    }, 250);
   }
 
   // SETTERS AND GETTERS
