@@ -1,4 +1,4 @@
-const display = new calculatorController('main', 'date', 'time', 'value-current');
+const display = new calculatorController('value-current', 'date', 'time', 'main');
 
 display;
 
