@@ -1,16 +1,16 @@
 class calculatorController {
 
   //OBJECT FROM CALCULATOR
-  constructor(calc, date, time, buttons){
-    this._audio = new Audio('./assents/sound/click.mp3');
+  constructor(calculatorRules, date, time, buttons){
+    this._displayCalcElements = document.getElementById(calculatorRules);
+    this._displayDataElements = document.getElementById(date);
+    this._displayTimeElements = document.getElementById(time);
+    this._clickButtons = document.querySelectorAll("#" + buttons + " [name]");
+    this._audio = new Audio('./src/assets/sound/click.mp3');
     this._audioOnOff = false;
     this._lastOperator = '';
     this._lastNumber = '';
     this._operation = [];
-    this._displayCalcElements = document.getElementById(calc);
-    this._displayDataElements = document.getElementById(date);
-    this._displayTimeElements = document.getElementById(time);
-    this._clickButtons = document.querySelectorAll("#" + buttons + " [name]");
     this._currentDate;
     this._locale = "pt-BR"
     this.DisplayNow();
@@ -18,17 +18,11 @@ class calculatorController {
     this.pressedKeyboard();
   }
 
-
   //DISPLAY INFORMATION
   DisplayNow(){
     setInterval(() =>{
-      this.displayDate = this.currentDate.toLocaleDateString(this._locale,{
-        day:"2-digit",
-        month:"long",
-        year: "numeric"
-      });
+      this.displayDate = this.currentDate.toLocaleDateString(this._locale);
       this.displayTime = this.currentDate.toLocaleTimeString(this._locale);
-     
     },1000);
     this.setLastNumberToDisplay();
     this.pasteFromClipboard();
@@ -38,42 +32,17 @@ class calculatorController {
         this.toggleAudio();
       });
     });
-
-
+  }
+  //Audio
+  toggleAudio(){
+    this._audioOnOff = !this._audioOnOff;
   }
 
-  //SHOWS DISPLAY VALUE
-  get displayCalc(){
-    return this._displayCalcElements.innerHTML;
-  }
-  //CHANGE DISPLAY VALUE
-  set displayCalc(value){
-    if(value.toString().length > 10){
-      this.setError();
-      return false;
+  playAudio(){
+    if (this._audioOnOff){
+      this._audio.currentTime = (0);
+      this._audio.play();
     }
-    this._displayCalcElements.innerHTML = value;
-  }
-
-  get displayDate(){
-    return this._displayDataElements.innerHTML;
-  }
-  set displayDate(value){
-    this._displayDataElements.innerHTML = value;
-  }
-
-  get displayTime(){
-    return this._displayTimeElements.innerHTML;
-  }
-  set displayTime(value){
-    this._displayTimeElements.innerHTML = value
-  }
-
-  get currentDate(){
-    return new Date();
-  }
-  set currentDate(value){
-    this._currentDate = value;
   }
 
   //BUTTONS CALCULATOR
@@ -83,7 +52,7 @@ class calculatorController {
     });
   }
 
-  clearAll(){
+  clearAllDisplay(){
     this._operation = [];
     this._lastNumber = '';
     this._lastOperator = '';
@@ -113,7 +82,7 @@ class calculatorController {
   pushOperation(value){
     this._operation.push(value);
     if(this._operation.length > 3){
-      this.calc()
+      this.calculatorRules()
     }
   }
 
@@ -125,12 +94,11 @@ class calculatorController {
       setTimeout(() =>{
         this.setError();
       },500);
-
     
     }
   }
 
-  calc(){
+  calculatorRules(){
     let last;
     
     this._lastOperator = this.getLastItem();
@@ -147,7 +115,6 @@ class calculatorController {
 
     }
     else if(this._operation.length == 3){
-     
       this._lastNumber = this.getLastItem(false);
 
     }
@@ -168,7 +135,6 @@ class calculatorController {
   getLastItem(isOperator = true){
     let lastItem;
     for(let i = this._operation.length-1; i >= 0; i--){
-   
         if(this.isOperator(this._operation[i]) == isOperator){
           lastItem = this._operation[i];
           break;
@@ -232,34 +198,31 @@ class calculatorController {
 
   }
 
-  execBtn(value){
+  execButton(value){
     this.playAudio();
     switch (value) {
-      case 'ac':
-        this.clearAll();
+      case 'Del':
+        this.clearAllDisplay();
         break;
-      case 'ce':
-        this.clearEntry();
-        break;
-      case 'soma':
+      case '+':
         this.addOperation('+');
         break;
-      case 'subtracao':
+      case '-':
         this.addOperation('-');
         break;
-      case 'divisao':
+      case '/':
         this.addOperation('/');
         break;
-      case 'multiplicacao':
+      case 'x':
         this.addOperation('*');
         break;
-      case 'porcento':
+      case '%':
         this.addOperation('%');
         break;
-      case 'igual':
-        this.calc();
+      case '=':
+        this.calculatorRules();
         break;
-      case 'ponto':
+      case '.':
         this.addDot();
         break;
       case '0':
@@ -285,8 +248,8 @@ class calculatorController {
 
     this._clickButtons.forEach((btn, index) => {
       this.addEventListenerAll(btn, "click drag", e => {
-        let numbersSymbols= btn.className.baseVal.replace("btn-", "");
-        this.execBtn(numbersSymbols);
+        let numbersSymbols= btn.innerHTML;
+        this.execButton(numbersSymbols);
       });
 
       this.addEventListenerAll(btn, "mouseover mouseup mousedown", e=>{
@@ -321,7 +284,7 @@ class calculatorController {
       this.playAudio();
       switch (e.key) {
         case 'Escape':
-          this.clearAll();
+          this.clearAllDisplay();
           break;
         case ' ':
           this.clearEntry();
@@ -335,7 +298,7 @@ class calculatorController {
           break;
         case 'Enter':
         case '=':
-          this.calc();
+          this.calculatorRules();
           break;
         case '.':
         case ',':
@@ -360,29 +323,39 @@ class calculatorController {
     });
   }
 
-  //Audio
-
-  toggleAudio(){
-    this._audioOnOff = !this._audioOnOff;
-
-    // this._audioOnOff = (this._audioOnOff) ? false : true;
-
-    // if (this._audioOnOff){
-    //   this._audioOnOff = false;
-    // }else{
-    //   this._audioOnOff = true;
-    // }
+//SHOWS DISPLAY VALUE
+  get displayCalc(){
+    return this._displayCalcElements.innerHTML;
   }
-
-  playAudio(){
-    if (this._audioOnOff){
-      this._audio.currentTime = (0);
-      this._audio.play();
+  //CHANGE DISPLAY VALUE
+  set displayCalc(value){
+    if(value.toString().length > 9){
+      this.setError();
+      return false;
     }
+    this._displayCalcElements.innerHTML = value;
   }
 
+  get displayDate(){
+    return this._displayDataElements.innerHTML;
+  }
+  set displayDate(value){
+    this._displayDataElements.innerHTML = value;
+  }
 
+  get displayTime(){
+    return this._displayTimeElements.innerHTML;
+  }
+  set displayTime(value){
+    this._displayTimeElements.innerHTML = value
+  }
 
+  get currentDate(){
+    return new Date();
+  }
+  set currentDate(value){
+    this._currentDate = value;
+  }
 }
 
 
