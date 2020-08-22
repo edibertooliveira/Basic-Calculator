@@ -33,11 +33,12 @@ class calculatorController {
       });
     });
   }
-  //Audio
+  
   toggleAudio(){
     this._audioOnOff = !this._audioOnOff;
   }
-
+  
+  //Audio
   playAudio(){
     if (this._audioOnOff){
       this._audio.currentTime = (0);
