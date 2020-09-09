@@ -22,3 +22,40 @@
 
 > :rocket: Calculator Developed With Html5,CSS3 & JavaScript: The goal will be to program it only with pure javascript.
 
+### :pushpin: Table of Contents
+
+* [Technologies](#computer-technologies)
+* [Features](#rocket-features)
+* [How to Run](#construction_worker-how-to-run)
+* [Found a bug? Missing a specific feature?](#bug-issues)
+* [License](#closed_book-license)
+
+### :computer: Technologies
+This project was made using the follow technologies:
+<ul>
+  <li><a href="https://developer.mozilla.org/">HTML5</a></li>
+  <li><a href="https://css-tricks.com/">CSS3</a></li>
+  <li><a href="https://www.javascript.com/">Javascript</a></li>
+</ul>
+
+### :rocket: Features
+
+* A very useful and agile tool for cropping images.
+* App easy to use without having to download or open softweres just the browser.
+
+### :construction_worker: How to run
+```bash
+# Clone Repository
+$ git clone https://github.com/edibertooliveira/Basic-Calculator.git
+```
+
+### :bug: Issues
+Feel free to **file a new issue** with a respective title and description on the the [Basic-Calculator](https://github.com/edibertooliveira/Basic-Calculator/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**!
+
+### :closed_book: License
+Released in 2020 :closed_book: License
+
+Made with love by [Ediberto Oliveira](https://github.com/edibertooliveira/) 🚀.
+This project is under the [MIT license](https://github.com/edibertooliveira/Basic-Calculator/master/LICENSE).
+
+Give a ⭐️ if this project helped you!
