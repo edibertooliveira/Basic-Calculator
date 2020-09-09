@@ -40,8 +40,8 @@ This project was made using the follow technologies:
 
 ### :rocket: Features
 
-* A very useful and agile tool for cropping images.
-* App easy to use without having to download or open softweres just the browser.
+* Calculadora basica, mais bem completa.
+* Aplicativo fácil de usar sem precisar baixar ou abrir softweres apenas do navegador.
 
 ### :construction_worker: How to run
 ```bash
