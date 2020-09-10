@@ -30,6 +30,7 @@
    <img src="./.github/Screenshot_3.png" width="250px">
 </div>
 
+<<<<<<< HEAD
 > :rocket: Calculator Developed With Model-view-controller (MVC) structure. created for study using as basis the lessons of the <a href="https://github.com/hcodebr" target="_blink">HCode Javascript Course</a>.
 
 ### :pushpin: Table of Contents
