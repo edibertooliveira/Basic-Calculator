@@ -7,15 +7,15 @@
   <a aria-label="Completed" href="https://edibertooliveira.github.io/Basic-Calculator/">
     <img src="https://img.shields.io/badge/Project-Calculator--Basic-red"></img>
   </a>
-  <a href="https://github.com/edibertooliveira/Proffy-Web/commits/master">
+  <a href="https://github.com/edibertooliveira/Basic-Calculator/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/edibertooliveira/Basic-Calculator?color=red">
   </a> 
 
-  <a href="https://github.com/edibertooliveira/Proffy-Web/master/LICENSE">
+  <a href="https://github.com/edibertooliveira/Basic-Calculator/master/LICENSE">
     <img alt="License" src="https://img.shields.io/badge/license-MIT-red">
   </a>
   
-   <a href="https://github.com/edibertooliveira/Proffy-Web/stargazers">
+   <a href="https://github.com/edibertooliveira/Basic-Calculator/stargazers">
     <img alt="Stargazers" src="https://img.shields.io/github/stars/edibertooliveira/Basic-Calculator?color=red">
   </a>
 </p>
@@ -50,8 +50,8 @@ This project was made using the follow technologies:
 
 ### :rocket: Features
 
-* A very useful and agile tool for cropping images.
-* App easy to use without having to download or open softweres just the browser.
+* Calculadora basica, mais bem completa.
+* Aplicativo fácil de usar sem precisar baixar ou abrir softweres apenas do navegador.
 
 ### :construction_worker: How to run
 ```bash
