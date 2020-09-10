@@ -24,7 +24,7 @@
 
 ### Web Screenshot
 
-<div style="display: flex; flex-direction: 'row'; align-items: 'center';">
+<div align="center" style="display: flex; flex-direction: 'row'; align-items: 'center';">
    <img src="./.github/Screenshot_1.png" width="250px">
    <img src="./.github/Screenshot_2.png" width="250px">
    <img src="./.github/Screenshot_3.png" width="250px">
