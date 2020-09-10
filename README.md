@@ -30,7 +30,7 @@
    <img src="./.github/Screenshot_3.png" width="250px">
 </div>
 
-> :rocket: Calculator Developed With Html5,CSS3 & JavaScript: The goal will be to program it only with pure javascript.
+> :rocket: Calculator Developed With Model-view-controller (MVC) structure.
 
 ### :pushpin: Table of Contents
 
