@@ -30,12 +30,13 @@
    <img src="./.github/Screenshot_3.png" width="250px">
 </div>
 
-> :rocket: Calculator Developed With Html5,CSS3 & JavaScript: The goal will be to program it only with pure javascript.
+> :rocket: Calculator Developed With Model-view-controller (MVC) structure. created for study using as basis the lessons of the <a href="https://github.com/hcodebr" target="_blink">HCode Javascript Course</a>.
 
 ### :pushpin: Table of Contents
 
 * [Technologies](#computer-technologies)
 * [Features](#rocket-features)
+* [Interesting things covered in this project](#Covered-in-this-project)
 * [How to Run](#construction_worker-how-to-run)
 * [Found a bug? Missing a specific feature?](#bug-issues)
 * [License](#closed_book-license)
@@ -50,13 +51,31 @@ This project was made using the follow technologies:
 
 ### :rocket: Features
 
-* Calculadora basica, mais bem completa.
-* Aplicativo fácil de usar sem precisar baixar ou abrir softweres apenas do navegador.
+* Basic calculator, more complete.
+Easy to use application without having to download or open softweres, just from your browser.
+
+### Covered in this project
+
+<ul>
+  <li>Model-view-controller (MVC) structure</li>
+  <li>Individual construction of an HTML calculator.</li>
+  <li>Using class with constructor, getters and setters.</li>
+  <li>Taking elements of the gift with querySelector and querySelectorAll.</li>
+  <li>Use and customization of the Date class and toLocale methods.</li>
+  <li>Handling multiple events in an element.</li>
+  <li>Evaluating expressions with eval ().</li>
+  <li>Using Clipboard functions via javascript.</li>
+  <li>Using double click event.</li>
+  <li>Event with audio.</li>
+</ul>
+
+> Status: Completo.
 
 ### :construction_worker: How to run
 ```bash
 # Clone Repository
 $ git clone https://github.com/edibertooliveira/Basic-Calculator.git
+
 ```
 
 ### :bug: Issues
