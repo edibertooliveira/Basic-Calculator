@@ -20,6 +20,16 @@
   </a>
 </p>
 
+# Basic-Calculator
+
+### Web Screenshot
+
+<div style="display: flex; flex-direction: 'row'; align-items: 'center';">
+   <img src="./.github/Screenshot_1.png" width="400px">
+   <img src="./.github/Screenshot_2.png" width="400px">
+   <img src="./.github/Screenshot_3.png" width="400px">
+</div>
+
 > :rocket: Calculator Developed With Html5,CSS3 & JavaScript: The goal will be to program it only with pure javascript.
 
 ### :pushpin: Table of Contents
